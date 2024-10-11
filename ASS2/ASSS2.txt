@@ -1,0 +1,119 @@
+1. List the directory contents date wise sorted. ( man ls)
+samarth@W2-87083:dir -t
+ ASS1	ASS5  ASS4  ASS3  ASS2
+ 
+ 2. List the directory contents size wise sorted.(man ls)ASS1.txt 
+ samarth@W2-87083:dir -s
+total 24
+4 ASS1	4 ASS1.txt  4 ASS2  4 ASS3  4 ASS4  4 ASS5
+
+3. List directory contents along with their inode no. (man
+ls)
+samarth@W2-87083: dir -inode
+3425164 ASS1	  3425690 ASS2	3425692 ASS4
+3420184 ASS1.txt  3425530 ASS3	3425693 ASS5
+
+4.List the contents of the subdirectory.
+samarth@W2-87083:ls ASS1
+ASS1.txt ASS2.txt
+
+5. Create a file, write your surname and name in it and
+save.
+
+samarth@W2-87083:cat>> Sam.txt
+NAME:SAMARTH ZADBUKE.
+i. now open the same file and add your address in it and
+save.
+samarth@W2-87083:echo address:HOUSE NO-339,VITTHAL NAGAR, BARSHI.
+ADDRESS:HOUSE NO-339,VITTHAL NAGAR, BARSHI.
+
+
+7. Create directory structure : Give following commands ,
+-> mkdir one
+-> cd one
+-> touch 1.txt 11.txt 111.txt
+-> mkdir two
+-> cd two
+-> touch 2.txt 22.txt 222.txt
+-> mkdir three
+-> cd three
+-> touch 3.txt 33.txt 333.txt
+-> mkdir four
+-> cd four
+-> touch 4.txt 44.txt 444.txt
+-> mkdir five
+-> cd five
+-> touch 5.txt 55.txt 555.txt
+-> cd ~
+
+samarth@W2-87083:~/classwork/Assignment$ mkdir one
+samarth@W2-87083:~/classwork/Assignment$ cd one
+samarth@W2-87083:~/classwork/Assignment/one$  touch 1.txt 11.txt 111.txt
+samarth@W2-87083:~/classwork/Assignment/one$  mkdir two
+samarth@W2-87083:~/classwork/Assignment/one$  cd two
+samarth@W2-87083:~/classwork/Assignment/one/two$ touch 2.txt 22.txt 222.txt 
+samarth@W2-87083:~/classwork/Assignment/one/two$ mkdir three
+samarth@W2-87083:~/classwork/Assignment/one/two$ cd three
+samarth@W2-87083:~/classwork/Assignment/one/two/three$  touch 3.txt 33.txt 333.txt
+samarth@W2-87083:~/classwork/Assignment/one/two/three$  mkdir four 
+samarth@W2-87083:~/classwork/Assignment/one/two/three$ cd four
+samarth@W2-87083:~/classwork/Assignment/one/two/three/four$ touch .txt 44.txt 444.txt
+samarth@W2-87083:~/classwork/Assignment/one/two/three/four$ mkdir five
+samarth@W2-87083:~/classwork/Assignment/one/two/three/four$ cd five
+samarth@W2-87083:~/classwork/Assignment/one/two/three/four/five$  touch 5.txt 55.txt 555.txt 
+samarth@W2-87083:~/classwork/Assignment/one/two/three/four/five$ cd ~
+
+
+8. Considering above directory structure , Do following
+operations :
+i. list the directory contents of directory named
+"five" from current directory (i.e. home directory).
+
+samarth@W2-87083:Home/Assignment/one/two/three/four/five  >> ASS1.txt
+555.txt  55.txt  5.txt
+
+ii. write your name in a file named "44.txt" of
+directory "four" from current directory.
+samarth@W2-87083:~/classwork$ cat > 444.txt
+NAME: SAMARTH ZADBUKE
+
+iii. remove the file named "555.txt" from directory
+"five" from current directory.
+samarth@W2-87083: rm Assignment/one/two/three/four/five/555.txt
+
+
+iv. change directory to five
+one/two/three/four/five/ )
+
+samarth@W2-87083:~/classwork$ cd Assignment/one/two/three/four/five
+
+samarth@W2-87083:~/classwork$ echo "COURSE:DMC" > Assignment/one/two/three/3.txt
+COURSE:DMC
+
+vi. list the contents of directory "two" from current
+directory (i.e. five).
+samarth@W2-87083:~/classwork$ ls Assignment/one/two
+
+vii. remove file named "222.txt" which belongs to
+directory "two" from current directory (i.e. five)
+samarth@W2-87083:~/classwork$ rm Assignment/one/two/222.txt
+
+viii. now change the directory to "one"
+samarth@W2-87083:~/classwork$ cd Assignment/one
+
+ix. remove all files only from directory named "five"
+from current directory (i.e. one)
+samarth@W2-87083:~/classwork/Assignment/one$ rm Assignment/one/two/three/four/five/*
+
+x. remove directory named "five" from current directory
+(i.e. one)
+samarth@W2-87083:~/classwork/Assignment/one$ rmdir two/three/four/five
+
+xi. remove whole directory named "four" from current
+directory (i.e. one)
+samarth@W2-87083:~/classwork/Assignment/one$ rm -r two/three/four
+
+
+xii. change to your home directory.
+samarth@W2-87083:~/classwork/Assignment$ cd ~
+

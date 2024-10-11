@@ -1,0 +1,76 @@
+
+Create a file named "data.txt" and write the following lines in it(write as it is).
+Linux is open source.
+In Linux everything is file
+files have permissions.
+files have inode no.
+files have size.
+there are several types of files
+
+samarth@W2-87083:~/classwork/Assignment$  cat >> data.txt
+LINUX IS OPEN SOURCE. 
+IN LINUX EVERYTHING IS FILE.
+FILES HAVE INODE NO 
+FILES HAVE SIZE
+THERE ARE SEVERAL TYPES OF FILE
+
+1.count the no. of words ,characters and lines from above 2 file.(man wc)
+samarth@W2-87083:~/classwork/Assignment$ wc data.txt
+ 20  88 532 data.txt
+ 
+ii.list the lines having word "files" (man grep)
+ samarth@W2-87083:~/classwork/Assignment$ grep "files" data.txt
+files have permissions.
+files have inode no.
+files have size.
+there are several types of files
+
+iii.list the lines having word "file" (man grep)
+samarth@W2-87083:~/classwork/Assignment$ grep "file" data.txt
+In Linux everything is file
+files have permissions.
+files have inode no.
+files have size.
+there are several types of files
+
+iv.list the lines which don't have word "files" (man grep)
+hisamarth@W2-87083:~/classwork/Assignment$ grep -v "file" data.txt
+Linux is open source.
+
+v.list the lines having word "have" . (man grep)
+samarth@W2-87083:~/classwork/Assignment$ grep "have" data.txt
+files have permissions.
+files have inode no.
+files have size.
+
+vi.list the lines starts with letter "f" (man grep)
+samarth@W2-87083:~/classwork/Assignment$ grep ^f "files" data.txt
+data.txt:files have permissions.
+data.txt:files have inode no.
+data.txt:files have size.
+
+vii.list the lines ends with "." (man grep)
+samarth@W2-87083:~/classwork/Assignment$ grep "\.$" data.txt
+Create a file named "data.txt" and write the following lines in it(write as it is).
+Linux is open source.
+files have permissions.
+files have inode no.
+files have size.
+
+viii.list only first two lines.(man head)
+samarth@W2-87083:~/classwork/Assignment$ head -n 2 data.txt
+Linux is open source.
+In Linux everything is file
+
+ix.list only last three lines.(man tail)
+samarth@W2-87083:~/classwork/Assignment$ tail -n 3 data.txt
+les have inode no.
+files have size.
+there are several types of files
+
+x.list line no.3,4 and 5 . (man head and tail)
+samarth@W2-87083:~/classwork/Assignment$ head -5 data.txt | tail -3
+files have permissions.
+files have inode no.
+files have size.
+
